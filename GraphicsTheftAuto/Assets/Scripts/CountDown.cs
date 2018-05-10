@@ -10,6 +10,7 @@ public class CountDown : MonoBehaviour {
     public AudioSource GoAudio;
     public GameObject LapTimer;
     public GameObject CarControls;
+    public GameObject OtherCar;
 
 
 	// Use this for initialization
@@ -22,7 +23,8 @@ public class CountDown : MonoBehaviour {
 
     IEnumerator CountStart()
     {
-        LapTimer.SetActive(false);
+        OtherCar.SetActive(false);
+       // LapTimer.SetActive(false);
         yield return new WaitForSeconds(0.5f);
 
         CountDownBox.GetComponent<Text>().text = "3";
@@ -49,6 +51,7 @@ public class CountDown : MonoBehaviour {
 
         LapTimer.SetActive(true);
         CarControls.SetActive(true);
+        OtherCar.SetActive(true);
     }
 	
 }
