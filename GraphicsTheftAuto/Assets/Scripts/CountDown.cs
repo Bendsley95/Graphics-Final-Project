@@ -10,6 +10,7 @@ public class CountDown : MonoBehaviour {
     public AudioSource GoAudio;
     public GameObject LapTimer;
     public GameObject CarControls;
+    public AudioSource LevelMusic;
    // public GameObject OtherCar;
 
 
@@ -48,7 +49,7 @@ public class CountDown : MonoBehaviour {
         yield return new WaitForSeconds(1);
         CountDownBox.SetActive(false);
         GoAudio.Play();
-
+        LevelMusic.Play();
         LapTimer.SetActive(true);
         CarControls.SetActive(true);
       //  OtherCar.SetActive(true);
